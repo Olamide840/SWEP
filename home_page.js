@@ -32,6 +32,7 @@
     const insider = localStorage.getItem("insiderScore");
     const data = localStorage.getItem("dataScore");
     const wifi = localStorage.getItem("wifiScore");
+    const ransome = localStorage.getItem("ransomeScore");
 
     let completed = 0;
 
@@ -69,7 +70,12 @@
       document.getElementById("wifi-status").textContent = "✅ Completed";
       completed++;
     }
-    const percent = (completed / 7) * 100;
+
+    if (ransome && ransome > 0) {
+      document.getElementById("ransome-status").textContent = "✅ Completed";
+      completed++;
+    }
+    const percent = (completed / 8) * 100;
     document.getElementById("progress-fill").style.width = percent + "%";
   }
 

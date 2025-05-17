@@ -157,6 +157,11 @@
     color: #fff;
     background-size: cover;
   }
+  .topic-card:nth-child(8){
+    background: url(ransome.jpg);
+    color: #fff;
+    background-size: cover;
+  }
   .topic-card:hover {
     transform: translateY(-5px);
     box-shadow: 0 0 40px #005bb5;

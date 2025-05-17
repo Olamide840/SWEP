@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ransomeware Quiz</title>
+    <link rel="stylesheet" href="home_page.css">
+</head>
+<body>
+    <header>
+        <h1>Ransomeware Quiz</h1>
+      </header>
+    
+      <main class="quiz-container">
+        <div id="quiz-box">
+          <h2 id="question"></h2>
+          <div id="options"></div>
+          <button onclick="nextQuestion()">Next</button>
+        </div>
+    
+        <div id="result-box" style="display:none;color: #fff;">
+          <h2>Your Score: <span id="score"></span></h2>
+          <button onclick="goHome()">Back to Home</button>
+        </div>
+      </main>
+    
+      <script src="ransome-quiz.js"></script>
+      <style>
+        body{
+          background-image: url(data.jpg);
+          background-size: cover;
+        }
+        header{
+          background: dodgerblue;
+        }
+        h2{
+          color: #fff;
+      }
+        button{
+          padding: 10px 35px;
+          bacKground: #ccc;
+          border-radius: 5px;
+          color: black;
+          border: none; 
+          cursor: pointer;
+          transition: .3s ease-in-out;
+      }
+      button:hover{
+        background-color: darkgrey;
+        color: white;
+      }
+      </style>
+</body>
+</html>

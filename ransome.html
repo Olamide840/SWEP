@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ransomware Attack</title>
+</head>
+<body>
+    <header>
+        <h1>Ransomware Awareness</h1>
+    </header>
+    <main class="module">
+        <section>
+          <h2>What is Ransomware ?</h2>
+          <p>Ransomware is a type of malware that encrypts the victim's personal data until a ransom is paid. Difficult-to-trace digital currencies such as paysafecard or Bitcoin and other cryptocurrencies are commonly used for the ransoms, making tracing and prosecuting the perpetrators difficult. </p>
+        </section>
+    
+        <section>
+          <h2>How to be safe from a Ransomware:</h2>
+          <ul>
+            <li>Robust Data BackUp</li>
+            <li>Cyber-awareness Training</li>
+            <li>Up-to-dates Patches</li>
+            <li>Strengthening user authentication</li>
+            <li>Utilize AI-powered threat prevention</li>
+          </ul>
+        </section>
+    
+        <button onclick="startQuiz()">Take Quiz</button>
+      </main>
+    <style>
+      *{
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+        body{
+            background-image: url(ransome.jpg);
+            background-size: cover;
+            color: #fff;
+            font-family: sans-serif;
+            font-weight: bolder;
+        }
+        header{
+          background: #2196f3;
+          text-align: center;
+          height: 12vh;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+        }
+        button{
+            padding: 14px 35px;
+            background: #2196f3;
+            cursor: pointer;
+            transition: .4s ease-in-out;
+            border: none;
+            border-radius: 5px;
+            color: #fff;
+        }
+        button:hover{
+            background: #2196f3;
+            box-shadow: 0 0 50px #2194f3, 0 0 40px #2196f3;
+            scale: 1.05;
+        }
+        main{
+          letter-spacing: 1px;
+          line-height: 35px;
+          margin: 10px;
+        }
+        ul {
+          padding-left: 1.5rem;
+        }
+    </style>
+      <script>
+        function startQuiz() {
+          window.location.href = 'ransome-quiz.html';
+        }
+      </script>
+</body>
+</html>
