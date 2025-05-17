@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Cybersecurity Awareness - Learn</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+
+  <h1>Common Cybersecurity Threats & Prevention</h1>
+
+  <div class="container" id="cardContainer">
+    <div class="card">
+      <h2>Phishing</h2>
+      <p><strong>Causes:</strong></p>
+      <ul>
+        <li>Fake links in emails</li>
+        <li>Unverified message sources</li>
+      </ul>
+      <p><strong>Prevention:</strong></p>
+      <ul>
+        <li>Never click suspicious links</li>
+        <li>Verify email addresses</li>
+        <li>Use anti-phishing filters</li>
+      </ul>
+    </div>
+
+    <div class="card">
+      <h2>Malware</h2>
+      <p><strong>Causes:</strong></p>
+      <ul>
+        <li>Downloading unsafe files</li>
+        <li>Infected USBs</li>
+      </ul>
+      <p><strong>Prevention:</strong></p>
+      <ul>
+        <li>Use antivirus software</li>
+        <li>Scan devices before use</li>
+        <li>Update your system often</li>
+      </ul>
+    </div>
+
+    <div class="card">
+      <h2>Ransomware</h2>
+      <p><strong>Causes:</strong></p>
+      <ul>
+        <li>Opening malicious attachments</li>
+        <li>Compromised websites</li>
+      </ul>
+      <p><strong>Prevention:</strong></p>
+      <ul>
+        <li>Regularly back up your data</li>
+        <li>Use strong firewalls</li>
+        <li>Do not open unknown attachments</li>
+      </ul>
+    </div>
+
+    <div class="card">
+      <h2>Password Attacks</h2>
+      <p><strong>Causes:</strong></p>
+      <ul>
+        <li>Weak or reused passwords</li>
+        <li>Phishing login pages</li>
+      </ul>
+      <p><strong>Prevention:</strong></p>
+      <ul>
+        <li>Use strong, unique passwords</li>
+        <li>Enable two-factor authentication</li>
+        <li>Change passwords regularly</li>
+      </ul>
+    </div>
+
+    <div class="card">
+      <h2>Social Engineering</h2>
+      <p><strong>Causes:</strong></p>
+      <ul>
+        <li>Manipulating human emotions</li>
+        <li>Impersonation or urgent requests</li>
+      </ul>
+      <p><strong>Prevention:</strong></p>
+      <ul>
+        <li>Always verify before sharing info</li>
+        <li>Be cautious of emotional appeals</li>
+        <li>Report suspicious requests</li>
+      </ul>
+    </div>
+
+    <div class="card">
+      <h2>Wi-Fi Snooping</h2>
+      <p><strong>Causes:</strong></p>
+      <ul>
+        <li>Using public Wi-Fi without protection</li>
+        <li>Unencrypted network traffic</li>
+      </ul>
+      <p><strong>Prevention:</strong></p>
+      <ul>
+        <li>Use a VPN on public Wi-Fi</li>
+        <li>Avoid logging in to sensitive sites</li>
+        <li>Disable automatic Wi-Fi connections</li>
+      </ul>
+    </div>
+
+    <div class="card">
+      <h2>Insider Threats</h2>
+      <p><strong>Causes:</strong></p>
+      <ul>
+        <li>Malicious Intention</li>
+        <li>Human Errors</li>
+      </ul>
+      <p><strong>Prevention:</strong></p>
+      <ul>
+        <li>Implement a Role Based Access Control</li>
+        <li>Use a User behavior analytics</li>
+        <li>Enable a strong policies regarding data access and AUP.</li>
+      </ul>
+    </div>
+
+    <div class="card">
+      <h2>Data Protection and Privacy</h2>
+      <p><strong>Causes:</strong></p>
+      <ul>
+        <li>Weak security measures</li>
+        <li>Unauthorized Access</li>
+      </ul>
+      <p><strong>Prevention:</strong></p>
+      <ul>
+        <li>Use strong Encryption</li>
+        <li>Regular security Audits</li>
+        <li>Implement Access Control</li>
+      </ul>
+    </div>
+  </div>
+
+  <div style="text-align:center;">
+    <a class="back" href="home_page.html">← Back to Home</a>
+  </div>
+  <link rel="stylesheet" href="landing_page.css">
+
+
+  <script>
+    const cards = document.querySelectorAll('.card');
+  
+    const revealOnScroll = () => {
+      const triggerBottom = window.innerHeight * 0.85;
+  
+      cards.forEach(card => {
+        const cardTop = card.getBoundingClientRect().top;
+  
+        if (cardTop < triggerBottom) {
+          card.classList.add('visible');
+        } else {
+          card.classList.remove('visible');
+        }
+      });
+    };
+  
+    window.addEventListener('scroll', revealOnScroll);
+    window.addEventListener('load', revealOnScroll);
+  </script>
+  
+</body>
+</html>

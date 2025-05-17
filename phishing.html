@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Phishing Awareness</title>
+</head>
+<body>
+  <header class="hero small">
+    <h1>Phishing Awareness</h1>
+  </header>
+
+  <main class="module">
+    <section>
+      <h2>What is Phishing?</h2>
+      <p>Phishing is a form of social engineering and a scam where attackers deceive people into revealing sensitive information or installing malware such as viruses, worms, adware, or ransomware.
+      </p>
+    </section>
+
+    <section>
+      <h2>How to Spot Phishing:</h2>
+      <ul>
+        <li>Look for suspicious email addresses or domains.</li>
+        <li>Watch out for urgency — “Your account will be closed!”</li>
+        <li>Do not click unknown links or attachments.</li>
+        <li>Check for bad grammar or weird requests.</li>
+        <li>Urgent or emotionally appealing language, especially messages that claim dire consequences for not responding immediately</li>
+      </ul>
+      <ul>
+        <h2>Prevention:</h2>
+        <li>Avoid clicking suspicious links or opening attachments in emails</li>
+        <li>Always verify the legitimacy of a request before providing personal information</li>
+        <li>Never click any links or attachments in suspicious emails or Teams messages</li>
+      </ul>
+    </section>
+
+    <button onclick="startQuiz()">Take Quiz</button>
+  </main>
+<style>
+  *{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+    body{
+        background-image: url(phishing.jpg);
+        color: #fff;
+        background-size: cover;
+        font-family: sans-serif;
+        font-weight: bolder;
+    }
+    header{
+      background: #2196f3;
+      text-align: center;
+      height: 12vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    button{
+        padding: 14px 35px;
+        background: #2196f3;
+        cursor: pointer;
+        transition: .4s ease-in-out;
+        border: none;
+        border-radius: 5px;
+        color: #fff;
+    }
+    button:hover{
+        background: #2196f3;
+        box-shadow: 0 0 50px #2194f3, 0 0 40px #2196f3;
+        scale: 1.05;
+    }
+    main{
+      letter-spacing: 1px;
+      line-height: 35px;
+      margin: 10px;
+    }
+    ul {
+      padding-left: 1.5rem;
+    }
+
+    li{
+      list-style: disc;
+
+    }
+</style>
+  <script>
+    function startQuiz() {
+      window.location.href = 'phishing-quiz.html';
+    }
+  </script>
+</body>
+</html>

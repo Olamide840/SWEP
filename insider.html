@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Insider Threats</title>
+</head>
+<body>
+    <header class="hero small">
+        <h1>Insider Threats Awareness.</h1>
+      </header>
+    
+      <main class="module">
+        <section>
+          <h2>What is an Insider Threats ?</h2>
+          <p>An insider threat is a security risk that arises from within an organization, typically from an employee, contractor, or other authorized individual who has access to sensitive information or systems. This risk can stem from malicious intent, negligence, or even unintentional actions that compromise the organization's security. </p>
+        </section>
+    
+        <section>
+          <h2>How to Spot an Insider Threats:</h2>
+          <ul>
+            <li>Changes in work patterns: Sudden changes in work hours, unexplained absences, or a decrease in overall productivity. </li>
+            <li>Unusual financial gain or distress: Sudden large purchases or unexplained financial hardships.</li>
+            <li>Excessive data access or downloads: Downloading or accessing unusually large amounts of data. </li>
+            <li>Unusual logon activity: Logging in outside of usual hours or from unusual locations. </li>
+            <li>Use of unauthorized software or hardware: Installing unapproved software or using personal devices without permission. </li>
+          </ul>
+          <ul>
+            <h2>Prevention:</h2>
+            <li>Establish clear, enforceable policies regarding data access, acceptable use, and security protocols. </li>
+            <li>Use the principle of least privilege, granting users only the access necessary for their roles. (RBAC)</li>
+            <li>Consider using user and entity behavior analytics (UEBA) to identify and prevent insider threats. </li>
+          </ul>
+        </section>
+    
+        <button onclick="startQuiz()">Take Quiz</button>
+      </main>
+    <style>
+      *{
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+        body{
+            background-image: url(insider.jpg);
+            background-size: cover;
+            color: #fff;
+            font-family: sans-serif;
+            font-weight: bolder;
+        }
+        header{
+          background: #2196f3;
+          text-align: center;
+          height: 12vh;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+        }
+        button{
+            padding: 14px 35px;
+            background: #2196f3;
+            cursor: pointer;
+            transition: .4s ease-in-out;
+            border: none;
+            border-radius: 5px;
+            color: #fff;
+        }
+        button:hover{
+            background: #2196f3;
+            box-shadow: 0 0 50px #2194f3, 0 0 40px #2196f3;
+            scale: 1.05;
+        }
+        main{
+          letter-spacing: 1px;
+          line-height: 35px;
+          margin: 10px;
+        }
+        ul {
+          padding-left: 1.5rem;
+        }
+    
+        li{
+          list-style: disc;
+    
+        }
+    </style>
+      <script>
+        function startQuiz() {
+          window.location.href = 'insider-quiz.html';
+        }
+      </script>
+</body>
+</html>
