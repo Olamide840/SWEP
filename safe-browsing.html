@@ -6,7 +6,7 @@
     <title>Safe Browsing</title>
 </head>
 <body>
-    <header class="hero small">
+    <header>
         <h1>Safe Browsing</h1>
       </header>
     
@@ -29,6 +29,7 @@
         </section>
     
         <button onclick="startQuiz()">Take Quiz</button>
+        <button id="print">Print this Page.</button>
       </main>
     <style>
       *{
@@ -77,7 +78,8 @@
       <script>
         function startQuiz() {
           window.location.href = 'safe-browsing-quiz.html';
-        }
+        };
+        document.getElementById('print').onclick = function(){window.print();};
       </script>
 </body>
 </html>

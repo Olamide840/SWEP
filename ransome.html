@@ -27,6 +27,7 @@
         </section>
     
         <button onclick="startQuiz()">Take Quiz</button>
+        <button id="print">Print this Page.</button>
       </main>
     <style>
       *{
@@ -75,7 +76,8 @@
       <script>
         function startQuiz() {
           window.location.href = 'ransome-quiz.html';
-        }
+        };
+        document.getElementById('print').onclick = function(){window.print();};
       </script>
 </body>
 </html>

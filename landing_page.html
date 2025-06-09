@@ -7,9 +7,9 @@
 </head>
 <body>
 
-  <h1>Common Cybersecurity Threats & Prevention</h1>
+  <h1>Common Cybersecurity Threats & Prevention.</h1>
 
-  <div class="container" id="cardContainer">
+  <div class="container">
     <div class="card">
       <h2>Phishing</h2>
       <p><strong>Causes:</strong></p>
@@ -131,32 +131,15 @@
     </div>
   </div>
 
+    <button id="print">Print this Page.</button>
   <div style="text-align:center;">
     <a class="back" href="home_page.html">← Back to Home</a>
   </div>
   <link rel="stylesheet" href="landing_page.css">
-
+  
 
   <script>
-    const cards = document.querySelectorAll('.card');
-  
-    const revealOnScroll = () => {
-      const triggerBottom = window.innerHeight * 0.85;
-  
-      cards.forEach(card => {
-        const cardTop = card.getBoundingClientRect().top;
-  
-        if (cardTop < triggerBottom) {
-          card.classList.add('visible');
-        } else {
-          card.classList.remove('visible');
-        }
-      });
-    };
-  
-    window.addEventListener('scroll', revealOnScroll);
-    window.addEventListener('load', revealOnScroll);
+    document.getElementById('print').onclick = function(){window.print();};
   </script>
-  
 </body>
 </html>

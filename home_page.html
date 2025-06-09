@@ -19,7 +19,7 @@
 
     <div class="theme-switch">
       <label class="switch">
-        <input type="checkbox" id="themeToggle">
+        <input type="checkbox" id="theme">
         <span class="slider"></span>
       </label>
       <span id="mode-text">Night Mode</span>
@@ -89,6 +89,7 @@
     </main>
 
     <section class="progress-section">
+      <button id="print">Print this Page.</button>
       <h2>Your Progress</h2>
       <div class="progress-bar">
         <div id="progress-fill"></div>
@@ -110,12 +111,14 @@
     <p>&copy; 2025 Cybersecurity Awareness</p>
   </footer>
   <script>
-    const themeToggle = document.getElementById("themeToggle");
-    if (themeToggle) {
-      themeToggle.addEventListener("change", function () {
+    const theme = document.getElementById("theme");
+    if (theme) {
+      theme.addEventListener("change", function () {
         document.body.classList.toggle("light-mode");
       });
     }
+
+    document.getElementById('print').onclick = function(){window.print();};
   </script>
   <script src="home_page.js"></script>
 </body>

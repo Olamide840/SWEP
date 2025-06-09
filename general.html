@@ -83,39 +83,46 @@
           </div>
         </section>
       </main>
-      
+       
+     <button id="print">Print this Page.</button>   
 
 <script>
-  const counts = document.querySelectorAll('.count');
-  let triggered = false;
+  const counts = document.querySelectorAll('.count'); //select all html attributes with .count
+  let scrolled = false; //to make the counting not to run more than once
 
   function countUp() {
-    if (triggered) return;
-    triggered = true;
+    if (scrolled) return; //it already runs and wont work again
+    scrolled = true; //else it will start running
   
-  counts.forEach(counter => {
-    const updateCount = () => {
-      const target = +counter.getAttribute('data-target');
-      const count = +counter.innerText;
-      const increase = target / 100;
+    //to start the counting of numbers
+  counts.forEach(counter => { 
+    const updateCount = () => { //The () is part of the arrow function syntax in JavaScript to make code works
+      const target = +counter.getAttribute('data-target'); //it gets the data target from html attributes
+      const count = +counter.innerText; //This gets the current number being displayed in the counter element.
+      const increase = target / 100; //this decides how much to increase the count by each time.
 
-      if (count < target) {
-        counter.innerText = Math.ceil(count + increase);
-        setTimeout(updateCount, 30);
+      
+      if (count < target) { //it means if thr count is lesser than the target
+        counter.innerText = Math.ceil(count + increase); //to round up the number so it doesn't look like decimal values
+        setTimeout(updateCount, 30); //means wait 30 milliseconds and run this function again 
       } else {
-        counter.innerText = target;
+        counter.innerText = target; //once it reach the target,it will stop increasing and set the value to the final target
       }
     };
-    updateCount();
+    updateCount(); //we call the function again to run
    });
   } 
-  window.addEventListener('scroll', () => {
-    const stats = document.querySelector('.cyb-stats');
-    const section = stats.offsetTop - window.innerHeight + 100;
-    if (window.scrollY > section) {
-      countUp();
+  //scroll detection
+  window.addEventListener('scroll', () => { //it tell the browser when user scrolls, do this code
+    const stats = document.querySelector('.cyb-stats'); //stats finds the element with the class .cyb-stats
+    const section = stats.offsetTop - window.innerHeight + 100; //This line is calculating how far the .cyb-stats section is from the top of the viewport
+    if (window.scrollY > section) { //window.scrollY is how far you’ve scrolled down the page.
+      countUp(); //we call the function 
     }
   });
+
+ document.getElementById('print').onclick = function(){window.print();};
+ 
 </script>      
 </body>
 </html>
