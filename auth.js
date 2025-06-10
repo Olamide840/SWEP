@@ -33,8 +33,8 @@ document.addEventListener("DOMContentLoaded", function () {
         loginForm.addEventListener("submit", function (e) {
             e.preventDefault();
 
-            let loginEmail = document.getElementById("login-email").value.trim();
-            let loginPassword = document.getElementById("login-password").value.trim();
+            let loginEmail = document.getElementById("email").value.trim();
+            let loginPassword = document.getElementById("password").value.trim();
 
             // Retrieve stored data
             let storedEmail = localStorage.getItem("userEmail");
