@@ -23,11 +23,9 @@ document.addEventListener("DOMContentLoaded", function () {
             localStorage.setItem("userPassword", password);
 
             alert("Signup successful! You can now login.");
-            window.location.href = "login.html";
+            window.location.href = "code.html";
         });
-    }
-
-    // Login Form Handling
+    };
     const loginForm = document.getElementById("login-form");
     if (loginForm) {
         loginForm.addEventListener("submit", function (e) {
@@ -39,21 +37,13 @@ document.addEventListener("DOMContentLoaded", function () {
             // Retrieve stored data
             let storedEmail = localStorage.getItem("userEmail");
             let storedPassword = localStorage.getItem("userPassword");
-
+            
             if (loginEmail === storedEmail && loginPassword === storedPassword) {
                 alert("Login successful!");
                 window.location.href = "general.html";
             } else {
                 alert("Invalid email or password!");
             }
-        });
-    }
-
-    // Theme Toggle
-    const themeToggle = document.getElementById("themeToggle");
-    if (themeToggle) {
-        themeToggle.addEventListener("change", function () {
-            document.body.classList.toggle("light-mode");
         });
     }
 });

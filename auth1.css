@@ -4,24 +4,36 @@ body {
     justify-content: center;
     align-items: center;
     height: 100vh;
-    background: linear-gradient(to right,purple,indigo,violet);
+    background: url(YES.JPEG);
+    background-size: cover;
     transition: background 0.3s, color 0.3s;
 }
 .container {
-    background: white;
-    padding: 20px;
-    border-radius: 5px;
-    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+     width: 450px;
+    background: transparent;
+    border: 2px solid rgba(255, 255, 255, .2);
+    border-radius: 20px;
+    color: #fff;
+    height: 400px;
+    backdrop-filter: blur(600px);
+    box-shadow: 0 0 10px rgba(0, 0, 0, .2);
+    padding: 30px 50px;
+    transition: background 0.4s;
     text-align: center;
-    transition: background 1s;
 }
 input {
-    width: 95%;
-    padding: 10px;
-    margin: 10px 0;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    outline-color: indigo;
+    width: 100%;
+    margin: 10px -10px;
+    background: transparent;
+    outline: none;
+    border: 3px solid rgba(255, 255, 255, .2);
+    border-radius: 40px;
+    font-size: 16px;
+    color: #fff;
+    padding: 15px;
+}
+input::placeholder{
+    color: #fff;
 }
 a{
     text-decoration: none;
@@ -30,81 +42,27 @@ a:hover{
     text-decoration: underline;
 }
 button {
+    border: 10px solid transparent;
+    background: transparent;
     width: 100%;
-    padding: 10px;
-    background: linear-gradient(to right, blue,purple,darkblue,indigo,violet);
-    color: white;
-    border: none;
-    border-radius: 5px;
+    border-radius: 40px;
+    margin-top: 10px;
     cursor: pointer;
-    transition: all .4s ease-in-out;
-    font-weight: bolder;
+    height: 45px;
+    border: none;
+    outline: none;
+    box-shadow: 0 0 10px #333;
+    font-size: 16px;
+    color: #fff;
+    font-weight: 600;
+    transition: 0.3s ease-in-out;
+    letter-spacing: 1px;
 }
 button:hover{
-    background: linear-gradient(lo right,violet,purple,blue);
-    color: #fff;
+    background: lightslategray;
     font-weight: bolder;
 }
-.theme-switch{
-    display: flex;
-    align-items: center;
-    position: absolute;
-    top: 10px;
-    right: 10px;
-}
-.switch {
-    position: relative;
-    display: inline-block;
-    width: 40px;
-    height: 20px;
-}
 
-.switch input {
-    opacity: 0;
-    width: 30px;
-    height: 40px;
-}
-
-.slider {
-    position: absolute;
-    cursor: pointer;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background-color: black;
-    border-radius: 20px;
-    transition: 0.4s;
-}
-
-.slider:before {
-    position: absolute;
-    content: "";
-    height: 14px;
-    width: 14px;
-    left: 3px;
-    bottom: 3px;
-    background-color: #fff;
-    border-radius: 50%;
-    transition: 0.4s;
-}
-
-input:checked + .slider {
-    background: linear-gradient(to right,blue, indigo,purple,darkblue);
-}
-
-input:checked + .slider:before {
-    transform: translateX(19px);
-}
-
-/* Light Mode */
-.light-mode {
-    color: #fff;
-}
-
-.light-mode .container {
-    background-color: #222;
-}
 .divider{
     display: flex;
     align-items: center;
@@ -164,5 +122,10 @@ input:checked + .slider:before {
     scale: 1.2;
 }
 .show-password{
-    display: flex;
+ display: flex;
+ align-items: center;
+ margin-top: 0px;   
+}
+.show-password input{
+    accent-color: #ddd;
 }

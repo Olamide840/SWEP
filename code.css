@@ -1,0 +1,104 @@
+body{
+    font-family: sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-image: url(YES.JPEG);
+    background-size: cover;
+    background-position: center;
+}
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+.wrapper{
+    width: 450px;
+    background: transparent;
+    border: 2px solid rgba(255, 255, 255, .2);
+    border-radius: 20px;
+    color: #fff;
+    height: 450px;
+    padding: 20px 40px;
+    backdrop-filter: blur(1100px);
+    box-shadow: 0 0 10px rgba(0, 0, 0, .2);
+    padding: 30px 50px;
+}
+.wrapper h1 {
+    font-size: 36px;
+    text-align: center;
+    
+}
+ .wrapper .input-box{
+    width: 100%;
+    height: 0px;
+    margin: 30px 0;
+}
+.input-box input {
+    width: 100%;
+    height: 100%;
+    background: transparent;
+    outline: none;
+    border: 3px solid rgba(255, 255, 255, .2);
+    border-radius: 40px;
+    font-size: 16px;
+    color: #fff;
+    padding: 20px 45px 20px 20px;
+}
+.input-box input::placeholder{
+    color: #fff;
+}
+.input-box i { 
+    right: 20px;
+    top: 50%;
+    margin-left: 310px;
+    transform: translateY(-150%);
+    font-size: 20px;
+    color: black;
+} 
+.check{
+    accent-color: #fff;
+    margin-right: 3px;
+}
+.god{
+    margin-top: 70px;
+}
+.ok{
+    margin-left: 49px;
+    color: #fff;
+    text-decoration: none;
+    transition: 0.4s ease-in-out;
+}
+.ok:hover{text-decoration: underline;}
+.btn{
+    border: 10px solid transparent;
+    background: transparent;
+    width: 100%;
+    border-radius: 40px;
+    margin-top: 10px;
+    cursor: pointer;
+    height: 45px;
+    border: none;
+    outline: none;
+    box-shadow: 0 0 10px #333;
+    font-size: 16px;
+    color: #fff;
+    font-weight: 600;
+    transition: 0.3s ease-in-out;
+}
+.btn:hover{
+    background-color: lightslategray;
+}
+.create{
+    color: #fff;
+    text-decoration: none;
+    font-weight: 600;
+}
+.do{
+    margin-top: 20px;
+    text-align: center;
+    font-size: 15px;
+
+}
+
