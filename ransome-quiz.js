@@ -1,3 +1,10 @@
+function shuffleArray(array) {
+  for (let i = array.length - 1; i > 0; i--) {
+    const j = Math.floor(Math.random() * (i + 1));
+    [array[i], array[j]] = [array[j], array[i]];
+  }
+}
+
 const questions = [
     {
       question: "What does ransomware do?",
@@ -204,36 +211,33 @@ const questions = [
   let currentQuestion = 0;
       let score = 0;
       
-      function loadQuestion() {
-        const q = questions[currentQuestion];
-        document.getElementById("question").textContent = `Q${currentQuestion + 1}: ${q.question}`;
+function loadQuestion() {
+    shuffleArray(questions); 
+    const q = questions[currentQuestion];
+    document.getElementById("question").textContent = `Q${currentQuestion + 1}: ${q.question}`;
+    const optionsDiv = document.getElementById("options");
+    optionsDiv.innerHTML = "";
+    q.options.forEach((opt, i) => {
+    const btn = document.createElement("button");
+    btn.textContent = opt;
+    btn.onclick = () => selectAnswer(i);
+    btn.className = "option-btn";
+    optionsDiv.appendChild(btn);
+});
+}
       
-        const optionsDiv = document.getElementById("options");
-        optionsDiv.innerHTML = "";
+function selectAnswer(selected) {
+  const correct = questions[currentQuestion].answer;
+  const buttons = document.querySelectorAll(".option-btn");
+  buttons.forEach((btn, idx) => {
+  btn.disabled = true;
+  if (idx === correct) btn.style.backgroundColor = "green";
+  if (idx === selected && idx !== correct) btn.style.backgroundColor = "red";
+  });
+  if (selected === correct) score++;
+}
       
-        q.options.forEach((opt, i) => {
-          const btn = document.createElement("button");
-          btn.textContent = opt;
-          btn.onclick = () => selectAnswer(i);
-          btn.className = "option-btn";
-          optionsDiv.appendChild(btn);
-        });
-      }
-      
-      function selectAnswer(selected) {
-        const correct = questions[currentQuestion].answer;
-        const buttons = document.querySelectorAll(".option-btn");
-      
-        buttons.forEach((btn, idx) => {
-          btn.disabled = true;
-          if (idx === correct) btn.style.backgroundColor = "green";
-          if (idx === selected && idx !== correct) btn.style.backgroundColor = "red";
-        });
-      
-        if (selected === correct) score++;
-      }
-      
-      function nextQuestion() {
+function nextQuestion() {
         if (currentQuestion < questions.length - 1) {
           currentQuestion++;
           loadQuestion();

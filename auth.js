@@ -14,10 +14,7 @@ document.addEventListener("DOMContentLoaded", function () {
                 alert("Username must be at least 8 characters long!");
                 return;
             }
-            if (password.length < 8) {
-                alert("Password must be at least 8 characters long!");
-                return;
-            }
+  if (password.length < 8 || !/[a-z]/.test(password) || !/[A-Z]/.test(password) || !/[0-9]/.test(password)) { alert('Password must be at least 8 characters, contain at least one lowercase letter, one uppercase letter, and one number!');return;}           
   // Store user data in localStorage
             localStorage.setItem("userEmail", email);
             localStorage.setItem("userPassword", password);

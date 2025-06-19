@@ -50,12 +50,10 @@ body{
     color: #fff;
 }
 .input-box i { 
-    right: 20px;
-    top: 50%;
-    margin-left: 310px;
-    transform: translateY(-150%);
-    font-size: 20px;
+    margin-left: 300px;
+    transform: translateY(-170%);
     color: black;
+    font-size: 20px;
 } 
 .check{
     accent-color: #fff;
