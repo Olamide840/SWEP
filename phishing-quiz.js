@@ -1,10 +1,3 @@
-function shuffleArray(array) {
-  for (let i = array.length - 1; i > 0; i--) {
-    const j = Math.floor(Math.random() * (i + 1));
-    [array[i], array[j]] = [array[j], array[i]];
-  }
-}
-
 const questions = [
     {
       question: "What is phishing?",
@@ -207,12 +200,17 @@ const questions = [
       answer: 2
     }
   ];
-  
+  function shuffleArray(array) {
+  for (let i = array.length - 1; i > 0; i--) {
+    const j = Math.floor(Math.random() * (i + 1));
+    [array[i], array[j]] = [array[j], array[i]];
+  }
+}
+
   let currentQuestion = 0;
   let score = 0;
   
   function loadQuestion() {
-    shuffleArray(questions); 
     const q = questions[currentQuestion];
     document.getElementById("question").textContent = `Q${currentQuestion + 1}: ${q.question}`;
   
@@ -264,5 +262,7 @@ const questions = [
     window.location.href = "home_page.html";
   }
   
-  window.onload = loadQuestion;
-  
+  window.onload = () => {
+  shuffleArray(questions);
+  loadQuestion();
+};
